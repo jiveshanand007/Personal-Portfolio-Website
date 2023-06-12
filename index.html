@@ -42,25 +42,61 @@
             margin: 24px 36px;
         }
 
+        nav ul li a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        nav ul li a:hover {
+            color: brown;
+        }
+
         .left {
             font-size: 1.5rem;
 
         }
-        .firstSection{
+
+        .firstSection {
             display: flex;
             justify-content: space-around;
-            margin: 10px 10px;
+            align-items: center;
+            margin: 85px 0px;
         }
-        .firstSection div{
-            width: 30%;
+
+        .firstSection>div {
+            width: 32%;
         }
-        .leftSection{
+
+        .leftSection {
+            font-size: 2.1rem;
+        }
+
+        .rightSection {
             display: flex;
-            background-color: brown;
         }
-        .rightSection{
-            display: flex;
-            background-color: brown;
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .red {
+            color: rgb(172, 17, 17);
+        }
+
+        #element {
+            color: rgb(172, 17, 17);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(136, 93, 237);
+            height: 1.1px;
+            margin: 4px 50px;
         }
     </style>
 </head>
@@ -71,11 +107,11 @@
             <div class="left">Jivesh's portfilio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -83,13 +119,29 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                This is left
+                Hi, My name is <span class="red"> Jivesh Anand </span>
+                <div> and I am a passionate </div>
+                <!-- <div>Web Developer.</div> -->
+                <span id="element"></span>
             </div>
             <div class="rightSection">
-                This is right
+                <img src="Contents/Images/homepage.png
+                " alt="">
             </div>
         </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Past Experience</h1>
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Video Editor.', 'Porn Star.'],
+            typeSpeed: 50,
+        });
+    </script>
+
 </body>
 
 </html>
